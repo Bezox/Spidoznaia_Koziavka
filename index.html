@@ -1,23 +1,111 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DarkLuxe Одежда</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-         <h1>Ігри</h1>   
-    </header>
- <main>
-    <h1>Цей сайт про Ігри</h1>
 
- </main>
-<footer>
-    <p>&copy; 2025</p>
-</footer>
-<script src="script.js" defer></script>
+  <header class="header">
+    <div class="logo">DarkLuxe</div>
+    <nav>
+      <a href="#categories" class="nav-link">Категории</a>
+      <a href="#gallery" class="nav-link">Каталог</a>
+      <a href="#about" class="nav-link">О нас</a>
+      <a href="#contact" class="nav-link">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Стиль и уют каждый день</h1>
+      <p>Одежда, подчеркивающая индивидуальность</p>
+      <a href="#gallery" class="btn">Смотреть каталог</a>
+    </div>
+  </section>
+
+  <section id="categories" class="categories section-hidden">
+    <div class="category" data-category="women">
+      <img src="https://via.placeholder.com/400x300" alt="Женская одежда" loading="lazy" />
+      <h2>Женская одежда</h2>
+    </div>
+    <div class="category" data-category="men">
+      <img src="https://via.placeholder.com/400x300" alt="Мужская одежда" loading="lazy" />
+      <h2>Мужская одежда</h2>
+    </div>
+    <div class="category" data-category="accessories">
+      <img src="https://via.placeholder.com/400x300" alt="Аксессуары" loading="lazy" />
+      <h2>Аксессуары</h2>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery section-hidden">
+    <h2 class="section-title">Каталог</h2>
+    <div class="filter-buttons">
+      <button data-filter="all" class="filter-btn active">Все</button>
+      <button data-filter="women" class="filter-btn">Женская одежда</button>
+      <button data-filter="men" class="filter-btn">Мужская одежда</button>
+      <button data-filter="accessories" class="filter-btn">Аксессуары</button>
+    </div>
+    <div class="product-grid">
+      <div class="product-card" data-category="women">
+        <img src="data:image/jpeg;base64,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" alt="Пальто" loading="lazy" />
+        <h3>Пальто из шерсти</h3>
+        <p>₴3200</p>
+      </div>
+      <div class="product-card" data-category="women">
+        <img src="https://via.placeholder.com/300x400" alt="Свитер" loading="lazy" />
+        <h3>Свитер oversize</h3>
+        <p>₴1500</p>
+      </div>
+      <div class="product-card" data-category="accessories">
+        <img src="https://via.placeholder.com/300x400" alt="Сумка" loading="lazy" />
+        <h3>Кожаная сумка</h3>
+        <p>₴2700</p>
+      </div>
+      <div class="product-card" data-category="men">
+        <img src="https://via.placeholder.com/300x400" alt="Куртка" loading="lazy" />
+        <h3>Куртка демисезонная</h3>
+        <p>₴2800</p>
+      </div>
+      <div class="product-card" data-category="men">
+        <img src="https://via.placeholder.com/300x400" alt="Рубашка" loading="lazy" />
+        <h3>Рубашка Casual</h3>
+        <p>₴1300</p>
+      </div>
+      <div class="product-card" data-category="accessories">
+        <img src="https://via.placeholder.com/300x400" alt="Шарф" loading="lazy" />
+        <h3>Тёплый шарф</h3>
+        <p>₴600</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about section-hidden">
+    <h2>О нас</h2>
+    <p>Мы создаем одежду, вдохновленную минимализмом и комфортом. Наш бренд предлагает продуманные решения для вашего повседневного стиля, оставаясь верным эстетике и качеству.</p>
+  </section>
+
+  <section id="contact" class="contact section-hidden">
+    <h2>Контакты</h2>
+    <p>Свяжитесь с нами по почте: <a href="mailto:info@darkluxe.ua">info@darkluxe.ua</a></p>
+    <p>Телефон: +380 (00) 123-45-67</p>
+  </section>
+
+  <footer>
+    <nav>
+      <a href="#" class="nav-link">Главная</a>
+      <a href="#categories" class="nav-link">Категории</a>
+      <a href="#about" class="nav-link">О нас</a>
+      <a href="#contact" class="nav-link">Контакты</a>
+    </nav>
+    <p>&copy; 2025 DarkLuxe. Все права защищены.</p>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Наверх">&#8679;</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
