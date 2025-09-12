@@ -3,105 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DarkLuxe Одежда</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>WolarBebe Shop</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="header">
-    <div class="logo">DarkLuxe</div>
+    <div class="logo">WolarBebe Shop</div>
     <nav>
-      <a href="#categories" class="nav-link">Категории</a>
       <a href="#gallery" class="nav-link">Каталог</a>
-      <a href="#about" class="nav-link">О нас</a>
-      <a href="#contact" class="nav-link">Контакты</a>
+      <a href="#contact" class="nav-link">О нас</a>
     </nav>
   </header>
-
+  <main>
   <section class="hero">
     <div class="hero-text">
-      <h1>Стиль и уют каждый день</h1>
-      <p>Одежда, подчеркивающая индивидуальность</p>
-      <a href="#gallery" class="btn">Смотреть каталог</a>
+      <h1>Кращий мерч Clash Royal</h1>
+      <p>Одяг, що підкреслює індивідуальність</p>
+      <a href="#gallery" class="btn">Дивитися каталог</a>
     </div>
   </section>
-
-  <section id="categories" class="categories section-hidden">
-    <div class="category" data-category="women">
-      <img src="https://via.placeholder.com/400x300" alt="Женская одежда" loading="lazy" />
-      <h2>Женская одежда</h2>
-    </div>
-    <div class="category" data-category="men">
-      <img src="https://via.placeholder.com/400x300" alt="Мужская одежда" loading="lazy" />
-      <h2>Мужская одежда</h2>
-    </div>
-    <div class="category" data-category="accessories">
-      <img src="https://via.placeholder.com/400x300" alt="Аксессуары" loading="lazy" />
-      <h2>Аксессуары</h2>
-    </div>
-  </section>
+  
+  
 
   <section id="gallery" class="gallery section-hidden">
     <h2 class="section-title">Каталог</h2>
     <div class="filter-buttons">
-      <button data-filter="all" class="filter-btn active">Все</button>
-      <button data-filter="women" class="filter-btn">Женская одежда</button>
-      <button data-filter="men" class="filter-btn">Мужская одежда</button>
-      <button data-filter="accessories" class="filter-btn">Аксессуары</button>
+      <button data-filter="all" class="filter-btn active">Усе</button>
+      <button data-filter="" class="filter-btn"></button>
+      <button data-filter="" class="filter-btn"></button>
+      <button data-filter="" class="filter-btn"></button>
     </div>
     <div class="product-grid">
-      <div class="product-card" data-category="women">
-        <img src="data:image/jpeg;base64,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" alt="Пальто" loading="lazy" />
-        <h3>Пальто из шерсти</h3>
-        <p>₴3200</p>
+      <div class="product-card" data-category="">
+        <img src="data:image/jpeg;base64,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" alt="">
+        <h3>T-Shirt</h3>
+        <p>999.99₴</p>
+        <button class="btn_action"><a href="card/index(2).html" class="btn_text_color">Купити</a></button>
       </div>
-      <div class="product-card" data-category="women">
-        <img src="https://via.placeholder.com/300x400" alt="Свитер" loading="lazy" />
-        <h3>Свитер oversize</h3>
-        <p>₴1500</p>
+
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(3).html" class="btn_text_color">Купити</a></button>
       </div>
-      <div class="product-card" data-category="accessories">
-        <img src="https://via.placeholder.com/300x400" alt="Сумка" loading="lazy" />
-        <h3>Кожаная сумка</h3>
-        <p>₴2700</p>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(4).html" class="btn_text_color">Купити</a></button>
       </div>
-      <div class="product-card" data-category="men">
-        <img src="https://via.placeholder.com/300x400" alt="Куртка" loading="lazy" />
-        <h3>Куртка демисезонная</h3>
-        <p>₴2800</p>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(5).html" class="btn_text_color">Купити</a></button>
       </div>
-      <div class="product-card" data-category="men">
-        <img src="https://via.placeholder.com/300x400" alt="Рубашка" loading="lazy" />
-        <h3>Рубашка Casual</h3>
-        <p>₴1300</p>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(6).html" class="btn_text_color">Купити</a></button>
       </div>
-      <div class="product-card" data-category="accessories">
-        <img src="https://via.placeholder.com/300x400" alt="Шарф" loading="lazy" />
-        <h3>Тёплый шарф</h3>
-        <p>₴600</p>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(7).html" class="btn_text_color">Купити</a></button>
+      </div>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(8).html" class="btn_text_color">Купити</a></button>
+      </div>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(9).html" class="btn_text_color">Купити</a></button>
+      </div>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(10).html" class="btn_text_color">Купити</a></button>
+      </div>
+       <div class="product-card" data-category="">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="btn_action"><a href="card/index(11)html" class="btn_text_color">Купити</a></button>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about section-hidden">
-    <h2>О нас</h2>
-    <p>Мы создаем одежду, вдохновленную минимализмом и комфортом. Наш бренд предлагает продуманные решения для вашего повседневного стиля, оставаясь верным эстетике и качеству.</p>
-  </section>
+  
 
   <section id="contact" class="contact section-hidden">
+    <h2>Про нас</h2>
+    <p>Ми творимо одяг, натхненний мінімалізмом і комфортом, але з королівською увагою до деталей.
+Наш бренд дарує продумані рішення для твого повсякденного стилю, зберігаючи якість та естетику, гідні арени! ⚔️✨</p>
     <h2>Контакты</h2>
-    <p>Свяжитесь с нами по почте: <a href="mailto:info@darkluxe.ua">info@darkluxe.ua</a></p>
+    <p>Свяжитесь с нами по почте: <a href="mailto:info@darkluxe.ua">info@wolarbebe.shop.ua</a></p>
     <p>Телефон: +380 (00) 123-45-67</p>
   </section>
-
+  </main>
   <footer>
     <nav>
+      
       <a href="#" class="nav-link">Главная</a>
-      <a href="#categories" class="nav-link">Категории</a>
-      <a href="#about" class="nav-link">О нас</a>
-      <a href="#contact" class="nav-link">Контакты</a>
+      <a href="#gallery" class="nav-link">Категории</a>
+      <a href="#contact" class="nav-link">Про нас</a>
     </nav>
-    <p>&copy; 2025 DarkLuxe. Все права защищены.</p>
+    <p>&copy; 2025 WolarBebe Shop. Все права защищены.</p>
   </footer>
 
   <button id="scrollTopBtn" aria-label="Наверх">&#8679;</button>

@@ -397,3 +397,38 @@ footer nav a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+/* Стили кнопки (форма, фон, эффекты) */
+.btn_action {
+  background: linear-gradient(135deg, var(--burgundy), var(--rose-gold));
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_action:hover {
+  background: linear-gradient(135deg, var(--terracotta), var(--rose-gold));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px var(--shadow-color);
+}
+
+.btn_action:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 3px 8px var(--shadow-color);
+}
+
+/* Стили текста кнопки */
+.btn_text_color {
+  color: var(--text-light);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
