@@ -8,118 +8,182 @@
 </head>
 <body>
 
+  <!-- 🏷️ Хедер з логотипом, меню та іконкою корзини -->
   <header class="header">
     <div class="logo">WolarBebe Shop</div>
     <nav>
       <a href="#gallery" class="nav-link">Каталог</a>
       <a href="#contact" class="nav-link">О нас</a>
     </nav>
+
+    <!-- 🛒 Іконка корзини -->
+    <div class="cart-icon" id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
   </header>
+
+  <!-- 🛍️ Вікно корзини -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Ваша корзина</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Сума: 0 грн</p>
+      <button id="checkout-btn" class="btn_action">Оформити замовлення</button>
+      <button id="close-cart" class="btn_action">Закрити</button>
+    </div>
+  </div>
+
   <main>
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Кращий мерч Clash Royal</h1>
-      <p>Одяг, що підкреслює індивідуальність</p>
-      <a href="#gallery" class="btn">Дивитися каталог</a>
-    </div>
-  </section>
-  
-  
+    <!-- 🌟 Герой-секція з привітанням -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Кращий мерч Clash Royale</h1>
+        <p>Одяг, що підкреслює індивідуальність</p>
+        <a href="#gallery" class="btn">Дивитися каталог</a>
+      </div>
+    </section>
 
-  <section id="gallery" class="gallery section-hidden">
-    <h2 class="section-title">Каталог</h2>
-    <div class="filter-buttons">
-      <button data-filter="all" class="filter-btn active">Усе</button>
-      <button data-filter="" class="filter-btn"></button>
-      <button data-filter="" class="filter-btn"></button>
-      <button data-filter="" class="filter-btn"></button>
-    </div>
-    <div class="product-grid">
-      <div class="product-card" data-category="">
-        <img src="data:image/jpeg;base64,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" alt="">
-        <h3>T-Shirt</h3>
-        <p>999.99₴</p>
-        <button class="btn_action"><a href="card/index(2).html" class="btn_text_color">Купити</a></button>
+    <!-- 📦 Каталог товарів -->
+    <section id="gallery" class="gallery section-hidden">
+      <h2 class="section-title">Каталог</h2>
+
+      <!-- 🔎 Фільтри (можна додати категорії) -->
+      <div class="filter-buttons">
+        <button data-filter="all" class="filter-btn active">Усе</button>
+        <button data-filter="tshirt" class="filter-btn">Футболки</button>
+        <button data-filter="hoodie" class="filter-btn">Худі</button>
+        <button data-filter="accessories" class="filter-btn">Аксесуари</button>
       </div>
 
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(3).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(4).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(5).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(6).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(7).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(8).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(9).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(10).html" class="btn_text_color">Купити</a></button>
-      </div>
-       <div class="product-card" data-category="">
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <button class="btn_action"><a href="card/index(11)html" class="btn_text_color">Купити</a></button>
+      <!-- 🛒 Сітка з товарами -->
+      <div class="product-grid">
+
+        
+        <div class="product-card" data-category="tshirt">
+          <img src="https://content2.rozetka.com.ua/goods/images/big/252199058.jpg" alt="Футболка Clash Royale">
+          <h3>Футболка Clash Royale</h3>
+          <p class="price">999.99 ₴</p>
+          <div class="controls">
+            <a href="card/index(2).html" class="btn link">Опис</a>
+            <button class="btn_action add-to-cart">Купити</button>
+          </div>
+        </div>
+
+        
+        <div class="product-card" data-category="hoodie">
+          <img src="" alt="Худі Clash Royale">
+          <h3>Худі Clash Royale</h3>
+          <p class="price">1499.00 ₴</p>
+          <div class="controls">
+            <a href="card/index(3).html" class="btn link">Опис</a>
+            <button class="btn_action add-to-cart">Купити</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cap">
+          <img src="" alt="Кепка Clash Royale">
+          <h3>Кепка Clash Royale</h3>
+          <p class="price">599.00 ₴</p>
+          <div class="controls">
+            <a href="card/index(4).html" class="btn link">Опис</a>
+            <button class="btn_action add-to-cart">Купити</button>
+          </div>
+        </div>
+        
+    <div class="product-card" data-category="accessories">
+      <img src="" alt="Рюкзак Clash Royale">
+      <h3>Рюкзак Clash Royale</h3>
+      <p class="price">1299 ₴</p>
+      <div class="controls">
+        <a href="card/backpack.html" class="btn link">Опис</a>
+        <button class="btn_action add-to-cart">Купити</button>
       </div>
     </div>
-  </section>
 
-  
+    
+    <div class="product-card" data-category="accessories">
+      <img src="" alt="Брелок Clash Royale">
+      <h3>Брелок Clash Royale</h3>
+      <p class="price">199 ₴</p>
+      <div class="controls">
+        <a href="card/keychain.html" class="btn link">Опис</a>
+        <button class="btn_action add-to-cart">Купити</button>
+      </div>
+    </div>
 
-  <section id="contact" class="contact section-hidden">
-    <h2>Про нас</h2>
-    <p>Ми творимо одяг, натхненний мінімалізмом і комфортом, але з королівською увагою до деталей.
-Наш бренд дарує продумані рішення для твого повсякденного стилю, зберігаючи якість та естетику, гідні арени! ⚔️✨</p>
-    <h2>Контакты</h2>
-    <p>Свяжитесь с нами по почте: <a href="mailto:info@darkluxe.ua">info@wolarbebe.shop.ua</a></p>
-    <p>Телефон: +380 (00) 123-45-67</p>
-  </section>
+    
+    <div class="product-card" data-category="accessories">
+      <img src="" alt="Постер Clash Royale">
+      <h3>Постер Clash Royale</h3>
+      <p class="price">299 ₴</p>
+      <div class="controls">
+        <a href="card/poster.html" class="btn link">Опис</a>
+        <button class="btn_action add-to-cart">Купити</button>
+      </div>
+    </div>
+
+    
+    <div class="product-card" data-category="accessories">
+      <img src="" alt="Кружка Clash Royale">
+      <h3>Кружка Clash Royale</h3>
+      <p class="price">349 ₴</p>
+      <div class="controls">
+        <a href="card/mug.html" class="btn link">Опис</a>
+        <button class="btn_action add-to-cart">Купити</button>
+      </div>
+    </div>
+
+    
+    <div class="product-card" data-category="accessories">
+      <img src="" alt="Наліпки Clash Royale">
+      <h3>Наліпки Clash Royale</h3>
+      <p class="price">149 ₴</p>
+      <div class="controls">
+        <a href="card/stickers.html" class="btn link">Опис</a>
+        <button class="btn_action add-to-cart">Купити</button>
+      </div>
+    </div>
+
+    
+    <div class="product-card" data-category="accessories">
+      <img src="" alt="Килимок для миші Clash Royale">
+      <h3>Килимок для миші</h3>
+      <p class="price">399 ₴</p>
+      <div class="controls">
+        <a href="card/mousepad.html" class="btn link">Опис</a>
+        <button class="btn_action add-to-cart">Купити</button>
+      </div>
+    </div>
+        
+
+      </div>
+    </section>
+
+    <!-- ℹ️ Секція Про нас -->
+    <section id="contact" class="contact section-hidden">
+      <h2>Про нас</h2>
+      <p>
+        Ми творимо одяг, натхненний мінімалізмом і комфортом, але з королівською увагою до деталей.  
+        Наш бренд дарує продумані рішення для твого повсякденного стилю, зберігаючи якість та естетику, гідні арени! ⚔️✨
+      </p>
+
+      <h2>Контакти</h2>
+      <p>Напишіть нам: <a href="mailto:info@wolarbebe.shop.ua">info@wolarbebe.shop.ua</a></p>
+      <p>Телефон: +380 (00) 123-45-67</p>
+    </section>
   </main>
+
+  <!-- 📌 Футер -->
   <footer>
     <nav>
-      
-      <a href="#" class="nav-link">Главная</a>
-      <a href="#gallery" class="nav-link">Категории</a>
+      <a href="#" class="nav-link">Головна</a>
+      <a href="#gallery" class="nav-link">Категорії</a>
       <a href="#contact" class="nav-link">Про нас</a>
     </nav>
-    <p>&copy; 2025 WolarBebe Shop. Все права защищены.</p>
+    <p>&copy; 2025 WolarBebe Shop. Всі права захищені.</p>
   </footer>
 
+  <!-- 🔝 Кнопка повернення вгору -->
   <button id="scrollTopBtn" aria-label="Наверх">&#8679;</button>
 
   <script src="script.js"></script>
