@@ -139,3 +139,24 @@ document.addEventListener('DOMContentLoaded', () => {
     cartModal.classList.remove('active');
   });
 });
+
+  //пошук товару
+ 
+const searchInput = document.getElementById("search-input");
+const products = document.querySelectorAll(".product-card");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
+  products.forEach(card => {
+    const titleEl = card.querySelector(".product-title") || card.querySelector("h3");
+    const title = titleEl ? titleEl.textContent.toLowerCase() : "";
+
+    if (title.includes(query)) {
+      card.style.display = ""; 
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+
