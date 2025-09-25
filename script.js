@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ------------------ Фильтр товаров ------------------ */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card');
+  
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
