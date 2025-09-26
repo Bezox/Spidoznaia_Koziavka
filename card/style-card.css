@@ -1,4 +1,4 @@
-/* ====== СТИЛЬ СТОРІНКИ ТОВАРУ (Улучшенный) ====== */
+
 .product-detail {
   padding: 4rem 1rem;
   display: flex;
@@ -77,6 +77,7 @@
   font-weight: 900;
   background: linear-gradient(90deg, #3B82F6, #F2C94C, #3B82F6);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 15px rgba(59,130,246,0.6);
   transition: text-shadow 0.3s ease;
@@ -111,7 +112,7 @@
   margin-top: 1rem;
 }
 
-/* Акция/заметка вместо кнопки */
+
 .notice {
   font-size: 1.3rem;
   font-weight: 700;
@@ -135,7 +136,7 @@
   50% { transform: scale(1.05); opacity: 0.8; }
 }
 
-/* ===== Адаптив ===== */
+
 @media (max-width: 900px) {
   .product-detail-container {
     grid-template-columns: 1fr;
