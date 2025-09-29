@@ -1,46 +1,49 @@
 :root {
   --bg-dark: #1A1D29;
   --bg-secondary: #222533;
+  --card-bg: #2A2F3D;
+
   --text-light: #F9F6EF;
   --text-muted: #B0B6C1;
+
   --blue: #3B82F6;
   --yellow: #F2C94C;
   --red: #D62828;
   --hover: #FFD166;
+
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --card-bg: #2A2F3D;
-  --shadow-color: rgba(0,0,0,0.8);
+  --shadow-color: rgba(0, 0, 0, 0.8);
 }
 
-/* --- Сброс и базовые стили --- */
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
   background: var(--bg-dark);
   color: var(--text-light);
   font-family: var(--font-main);
-  scroll-behavior: smooth;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
+
 a {
   color: var(--blue);
   text-decoration: none;
   transition: color 0.3s;
 }
-a:hover { 
-  color: var(--yellow); 
+a:hover {
+  color: var(--yellow);
 }
 
-/* --- Шапка --- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--bg-secondary);
+  background: var(--bg-secondary);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -49,112 +52,112 @@ header {
 
 .logo {
   font-size: 1.8rem;
-  color: var(--blue);
   font-weight: 700;
+  color: var(--blue);
 }
 
 .cart-icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  
-  background: var(--blue);
-  color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  background: var(--blue);
+  color: white;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.7);
 }
-
 .cart-icon:hover {
   background: var(--yellow);
   color: var(--bg-dark);
   transform: scale(1.05);
 }
 
-.controls {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.controls .btn,
-.controls .btn_action {
-  flex: 1;
-  min-width: 90px;
-  font-weight: 700;
-}
-
-.btn, .btn_action {
-  background: var(--blue);
-  color: white;
+.btn,
+.btn_action {
   width: 40%;
-  min-width: 40%;
+  min-width: 90px;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 8px;
-  font-weight: 700;
+  background: var(--blue);
+  color: white;
   font-size: 0.95rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   box-shadow: 0 3px 8px rgba(59, 130, 246, 0.6);
 }
-.btn:hover, .btn_action:hover {
+.btn:hover,
+.btn_action:hover {
   background: var(--yellow);
   color: var(--bg-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(59, 130, 246, 0.85);
 }
-.btn:active, .btn_action:active {
+.btn:active,
+.btn_action:active {
   transform: scale(0.97);
   box-shadow: 0 3px 8px rgba(59, 130, 246, 0.65);
 }
 
-/* --- Герой-блок --- */
 .hero {
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 85vh;
-  background: url('https://pibig.info/uploads/posts/2022-07/1657192385_3-pibig-info-p-fon-klesh-royal-3.jpg') center/cover no-repeat;
   position: relative;
+  background: url('https://pibig.info/uploads/posts/2022-07/1657192385_3-pibig-info-p-fon-klesh-royal-3.jpg')
+              center/cover no-repeat;
 }
 .hero::after {
-  content: ''; position: absolute; inset: 0;
-  background: rgba(18,18,18,0.75);
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.75);
 }
+
 .hero-text {
   position: relative;
   text-align: center;
   z-index: 1;
-  animation: fadeIn 2s ease;
   max-width: 700px;
   padding: 0 1rem;
+  animation: fadeIn 2s ease;
 }
 .hero-text h1 {
   font-size: 3rem;
   color: var(--yellow);
   margin-bottom: 1rem;
 }
-.hero-text p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
 
-/* --- Секции --- */
 section {
   padding: 3rem 2rem;
 }
+
 .section-title {
   text-align: center;
   font-size: 2.2rem;
+  font-weight: 600;
   color: var(--yellow);
   margin-bottom: 2rem;
-  font-weight: 600;
 }
 
-/* --- Фильтры --- */
-.filter-buttons { text-align: center; margin-bottom: 2rem; }
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .filter-btn {
   background: none;
   border: 2px solid var(--blue);
@@ -166,81 +169,69 @@ section {
   cursor: pointer;
   transition: 0.3s;
 }
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
   background: var(--blue);
   color: var(--bg-dark);
   box-shadow: 0 6px 12px rgba(59, 130, 246, 0.7);
 }
 
-/* --- Карточки товаров --- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
+
 .product-card {
-  background: var(--card-bg);
-  border-radius: 12px;
+  max-width: 240px;
+  margin: 0 auto;
   padding: 1rem;
   text-align: center;
+  background: var(--card-bg);
+  border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   transition: 0.3s;
-  max-width: 240px; /* карточка компактнее */
-  margin: 0 auto;
 }
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px var(--blue);
 }
+
 .product-card img {
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  width: 100%;
   border-radius: 10px;
   margin-bottom: 0.8rem;
 }
-.product-card h3 { color: var(--blue); margin-bottom: 0.3rem; }
+.product-card h3 {
+  color: var(--blue);
+  margin-bottom: 0.3rem;
+}
 .product-card p {
   font-weight: 700;
-  font-size: 1rem;
   margin-bottom: 0.8rem;
 }
-.product-image {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
-}
-/* --- Кнопки внутри карточки --- */
 .product-card .button-group {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
 }
-.product-card .btn {
-  flex: 1;
-  min-width: 90px;
-  font-weight: 700;
-}
 
-/* --- Контакт/О нас --- */
 .contact {
-  background: var(--bg-secondary);
-  text-align: center;
   max-width: 700px;
-  margin: 0 auto;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  margin: 0 auto 40px;
   padding: 2rem;
-  margin-bottom: 40px;
+  text-align: center;
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* --- Подвал --- */
 footer {
-  background: #0E0E0E;
   padding: 2rem;
   text-align: center;
+  background: #0E0E0E;
   color: var(--text-muted);
   font-size: 0.9rem;
 }
@@ -249,68 +240,76 @@ footer nav a {
   color: var(--blue);
   font-weight: 500;
 }
-footer nav a:hover { color: var(--yellow); }
+footer nav a:hover {
+  color: var(--yellow);
+}
 
-/* --- Анимации --- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .section-hidden {
-  opacity: 0; transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.6s ease-out;
 }
 .section-visible {
-  opacity: 1; transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* --- Кнопка наверх --- */
 #scrollTopBtn {
-  position: fixed; right: 30px; bottom: 30px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
   background: var(--blue);
   color: var(--bg-dark);
-  border: none;
-  border-radius: 50%;
-  width: 45px; height: 45px;
   font-size: 24px;
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.7);
-  opacity: 0; pointer-events: none;
   transition: opacity 0.3s;
   z-index: 10000;
 }
-#scrollTopBtn.show { opacity: 1; pointer-events: auto; }
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-/* --- Корзина (панель) --- */
 .cart-modal {
-  position: fixed; top: 0; right: 0;
-  width: 350px; height: 100%;
-  background: var(--bg-secondary);
-  box-shadow: -4px 0 10px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
   padding: 20px;
-  z-index: 2000;
+  background: var(--bg-secondary);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
 }
-.cart-modal.active { transform: translateX(0); }
-.cart-content { color: var(--text-light); }
+.cart-modal.active {
+  transform: translateX(0);
+}
 #cart-items li {
-  display: flex; justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   margin: 8px 0;
-  border-bottom: 1px solid var(--text-muted);
   padding-bottom: 5px;
-}
-
-/* --- Адаптив --- */
-@media (max-width: 768px) {
-  .hero-text h1 { font-size: 2.2rem; }
-  nav a { margin-left: 1rem; font-size: 0.9rem; }
+  border-bottom: 1px solid var(--text-muted);
 }
 
 .search-container {
   text-align: center;
   margin: 2rem 0;
 }
+
 #search-input {
   width: 60%;
   max-width: 500px;
@@ -321,13 +320,42 @@ footer nav a:hover { color: var(--yellow); }
   border: 2px solid var(--blue);
   border-radius: 30px;
   outline: none;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
-#search-input::placeholder { color: var(--text-muted); font-style: italic; }
+#search-input::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
 #search-input:focus {
   border-color: var(--yellow);
-  box-shadow: 0 6px 16px rgba(242, 201, 76, 0.6);
   background: var(--bg-secondary);
   transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(242, 201, 76, 0.6);
 }
+
+@media (max-width: 768px) {
+  .hero-text h1 { font-size: 2.2rem; }
+  nav a { margin-left: 1rem; font-size: 0.9rem; }
+}
+.product-card .buttons {
+  display: flex;
+  gap: 10px; 
+}
+
+
+.hero .btn {
+  padding: 1rem 2.5rem; 
+  font-size: 1.2rem;
+  border-radius: 12px;
+}
+
+
+.product-card .btn,
+.product-card .btn_action {
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  flex: 1; 
+}
+
