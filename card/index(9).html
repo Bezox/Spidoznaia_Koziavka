@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наліпки Clash Royale — WolarBebe Shop</title>
+  <link rel="stylesheet" href="/style.css"> 
+  <link rel="stylesheet" href="style-card.css"> 
+</head>
+<body>
+
+  <!-- ===== Хэдер ===== -->
+  <header class="header">
+    <div class="logo">WolarBebe Shop</div>
+    <nav>
+      <a href="../index.html" class="nav-link">Головна</a>
+      <a href="../index.html#gallery" class="nav-link">Каталог</a>
+      <a href="../index.html#contact" class="nav-link">Про нас</a>
+    </nav>
+    <div class="cart-icon" id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- ===== Карточка товара ===== -->
+  <main>
+    <section class="product-detail">
+      <div class="product-detail-container">
+        <!-- Фото -->
+        <div class="product-detail-image">
+          <img src="data:image/png;base64,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" alt="Наліпки Clash Royale">
+        </div>
+
+        <!-- Інформація про товар -->
+        <div class="product-detail-info">
+          <h1 class="product-title">Наліпки Clash Royale</h1>
+          <p class="price" data-price="149">149 ₴</p>
+          <p class="description">
+            Набір наліпок з персонажами та логотипами Clash Royale. Ідеально підходить для прикраси ноутбуків, телефонів, зошитів та інших поверхонь. Висока якість друку та яскраві кольори.
+          <div class="controls">
+            
+            <a href="../index.html" class="btn">Назад до каталогу</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Корзина ===== -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Ваша корзина</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Сума: 0 грн</p>
+      <button id="checkout-btn" class="btn_action">Оформити замовлення</button>
+      <button id="close-cart" class="btn_action">Закрити</button>
+    </div>
+  </div>
+
+  <!-- ===== Футер ===== -->
+  <footer>
+    <nav>
+      <a href="../index.html" class="nav-link">Головна</a>
+      <a href="../index.html#gallery" class="nav-link">Категорії</a>
+      <a href="../index.html#contact" class="nav-link">Про нас</a>
+    </nav>
+    <p>&copy; 2025 WolarBebe Shop. Всі права захищені.</p>
+  </footer>
+
+  <!-- ===== Кнопка "Наверх" ===== -->
+  <button id="scrollTopBtn" aria-label="Наверх">&#8679;</button>
+
+  <script src="../script.js"></script>
+</body>
+</html>
