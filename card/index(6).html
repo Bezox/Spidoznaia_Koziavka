@@ -1,1 +1,76 @@
-  <link rel="stylesheet" href="style.css"> 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Брелок Clash Royale — WolarBebe Shop</title>
+  <link rel="stylesheet" href="../style.css"> 
+  <link rel="stylesheet" href="style-card.css"> 
+</head>
+<body>
+
+  <!-- ===== Хэдер ===== -->
+  <header class="header">
+    <div class="logo">WolarBebe Shop</div>
+    <nav>
+      <a href="../index.html" class="nav-link">Головна</a>
+      <a href="../index.html#gallery" class="nav-link">Каталог</a>
+      <a href="../index.html#contact" class="nav-link">Про нас</a>
+    </nav>
+    <div class="cart-icon" id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- ===== Карточка товара ===== -->
+  <main>
+    <section class="product-detail">
+      <div class="product-detail-container">
+        <!-- Фото -->
+        <div class="product-detail-image">
+          <img src="data:image/jpeg;base64,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" alt="Брелок Royale">
+        </div>
+
+        <!-- Інформація про товар -->
+        <div class="product-detail-info">
+          <h1 class="product-title">брелок Royale</h1>
+          <p class="price" data-price="199 ">199 ₴</p>
+          <p class="description">
+            брелок з логотипом Clash Royale. Виготовлений з високоякісного пластику, цей брелок є ідеальним аксесуаром для фанатів гри. Компактний та легкий, він легко кріпиться до ключів, рюкзака або сумки.
+          </p>
+          <div class="controls">
+            
+            <a href="../index.html" class="btn">Назад до каталогу</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Корзина ===== -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Ваша корзина</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Сума: 0 грн</p>
+      <button id="checkout-btn" class="btn_action">Оформити замовлення</button>
+      <button id="close-cart" class="btn_action">Закрити</button>
+    </div>
+  </div>
+
+  <!-- ===== Футер ===== -->
+  <footer>
+    <nav>
+      <a href="../index.html" class="nav-link">Головна</a>
+      <a href="../index.html#gallery" class="nav-link">Категорії</a>
+      <a href="../index.html#contact" class="nav-link">Про нас</a>
+    </nav>
+    <p>&copy; 2025 WolarBebe Shop. Всі права захищені.</p>
+  </footer>
+
+  <!-- ===== Кнопка "Наверх" ===== -->
+  <button id="scrollTopBtn" aria-label="Наверх">&#8679;</button>
+
+  <script src="../script.js"></script>
+</body>
+</html>

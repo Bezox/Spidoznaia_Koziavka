@@ -1,1 +1,76 @@
-  <link rel="stylesheet" href="style.css"> 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Худі Clash Royale — WolarBebe Shop</title>
+  <link rel="stylesheet" href="../style.css"> 
+  <link rel="stylesheet" href="style-card.css"> 
+</head>
+<body>
+
+  <!-- ===== Хэдер ===== -->
+  <header class="header">
+    <div class="logo">WolarBebe Shop</div>
+    <nav>
+      <a href="../index.html" class="nav-link">Головна</a>
+      <a href="../index.html#gallery" class="nav-link">Каталог</a>
+      <a href="../index.html#contact" class="nav-link">Про нас</a>
+    </nav>
+    <div class="cart-icon" id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- ===== Карточка товара ===== -->
+  <main>
+    <section class="product-detail">
+      <div class="product-detail-container">
+        <!-- Фото -->
+        <div class="product-detail-image">
+          <img src="https://images.teepublic.com/derived/production/designs/78567377_0/1754668454/i_m:bi_production_blanks_nnww1jebayb5zbwztdgd_1446840660,c_0_0_465x,s_313,q_90.jpg" alt="Худі Clash Royale">
+        </div>
+
+        <!-- Інформація про товар -->
+        <div class="product-detail-info">
+          <h1 class="product-title">Худі Clash Royale</h1>
+          <p class="price" data-price="1499">1499 ₴</p>
+          <p class="description">
+              Стильне худі з принтом Clash Royale, виготовлена з якісного бавовняного матеріалу. Комфортна для щоденного носіння та подарункова ідея для фанатів гри.
+          </p>
+          <div class="controls">
+            
+            <a href="../index.html" class="btn">Назад до каталогу</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Корзина ===== -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Ваша корзина</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Сума: 0 грн</p>
+      <button id="checkout-btn" class="btn_action">Оформити замовлення</button>
+      <button id="close-cart" class="btn_action">Закрити</button>
+    </div>
+  </div>
+
+  <!-- ===== Футер ===== -->
+  <footer>
+    <nav>
+      <a href="../index.html" class="nav-link">Головна</a>
+      <a href="../index.html#gallery" class="nav-link">Категорії</a>
+      <a href="../index.html#contact" class="nav-link">Про нас</a>
+    </nav>
+    <p>&copy; 2025 WolarBebe Shop. Всі права захищені.</p>
+  </footer>
+
+  <!-- ===== Кнопка "Наверх" ===== -->
+  <button id="scrollTopBtn" aria-label="Наверх">&#8679;</button>
+
+  <script src="../script.js"></script>
+</body>
+</html>
