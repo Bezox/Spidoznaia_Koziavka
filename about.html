@@ -1,103 +1,145 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WolarBebe Shop</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="about.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WolarBebe Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <!-- 🏷️ Хедер з логотипом, меню та іконкою корзини -->
+    <header class="header">
+      <div class="logo">WolarBebe Shop</div>
 
-  <!-- 🏷️ Хедер з логотипом, меню та іконкою корзини -->
-  <header class="header">
-    
-    <div class="logo">WolarBebe Shop</div>
-    
-    <div class="correct">
-      <nav>
-        <a href="#gallery" class="nav-link">Каталог</a>
-        <a href="#contact" class="nav-link">О нас</a>
-      </nav>
+      <div class="correct">
+        <nav>
+          <a href="#gallery" class="nav-link">Каталог</a>
+          <a href="#contact" class="nav-link">О нас</a>
+        </nav>
 
-      <!-- 🛒 Іконка корзини -->
-      <div class="cart-icon" id="cart-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"  viewBox="0 0 64 64" role="img" aria-label="Shopping basket   Clash Royale style">
-          <title>Shopping basket</title>
-          <path fill="white" fill-rule="evenodd" d="
+        <!-- 🛒 Іконка корзини -->
+        <div class="cart-icon" id="cart-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 64 64"
+            role="img"
+            aria-label="Shopping basket   Clash Royale style"
+          >
+            <title>Shopping basket</title>
+            <path
+              fill="white"
+              fill-rule="evenodd"
+              d="
             M10 22h44l-4 26c-0.5 4-3 6-6 6H20c-3 0-5.5-2-6-6l-4-26Z
             M18 28h4v16h-4z
             M26 28h4v16h-4z
             M34 28h4v16h-4z
-            M42 28h4v16h-4z">
-          </path>
-          <path fill="white" d="M18 22L26 6h4l-8 16Z"/>
-          <path fill="white" d="M46 22L38 6h-4l8 16Z"/>
-        </svg>
+            M42 28h4v16h-4z"
+            ></path>
+            <path fill="white" d="M18 22L26 6h4l-8 16Z" />
+            <path fill="white" d="M46 22L38 6h-4l8 16Z" />
+          </svg>
 
-        <span id="cart-count">0</span>
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 🛍️ Вікно корзини -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <h2>Ваша корзина</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Сума: 0 грн</p>
+        <button id="checkout-btn" class="btn_action">Оформити замовлення</button>
+        <button id="close-cart" class="btn_action">Закрити</button>
       </div>
     </div>
-  </header>
 
+    <main>
+      <section class="about">
+        <h1>Це сторінка про нас</h1>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmG6spH81W-DBP7xEKXLcUOeDzld3FsiD9HQ&s"
+        />
+        <p style="">
+          Наш інтернет-магазин створений для тих,хто цінує якість, зручність і сучасний стиль
+        </p>
+        <p>
+          Ми пропонуємо широкий вибір одяг та аксесуарів,які допоможуть вам виглядати впевнено
+          кожного дня.
+        </p>
+       <h1> Що ви знайдете у нас? </h1>
 
-  <!-- 🛍️ Вікно корзини -->
-  <div id="cart-modal" class="cart-modal">
-    <div class="cart-content">
-      <h2>Ваша корзина</h2>
-      <ul id="cart-items"></ul>
-      <p id="cart-total">Сума: 0 грн</p>
-      <button id="checkout-btn" class="btn_action">Оформити замовлення</button>
-      <button id="close-cart" class="btn_action">Закрити</button>
-    </div>
-  </div>
+<p>  У нашому інтернет-магазині ми зібрали найкращі товари, натхненні всесвітом Clash Royale: </p>
+<ul>
+<li>  Одяг: Стильні футболки, худі та кепки із зображеннями ваших улюблених героїв, кланів та емодзі. Покажіть усім, хто ваш фаворит!</li> 
 
-  <main>
-    <section class="about">
-      <h1>Це сторінка про нас</h1>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmG6spH81W-DBP7xEKXLcUOeDzld3FsiD9HQ&s">
- <p style=""> Наш інтернет-магазин створений для тих,хто цінує якість, зручність і сучасний стиль<div class=""></div> </p>
- <p>             Ми пропонуємо широкий вибір одяг та аксесуарів,які допоможуть вам виглядати впевнено кожного дня. </p> 
-   У нашому інтернет-магазині ми зібрали найкращі товари, натхненні всесвітом Clash Royale:
+<li> Аксесуари: Брелоки, стікери, чохли для телефонів та інші дрібниці, які додадуть трішки магії Clash Royale у ваше повсякденне життя.</li> 
 
-Одяг: Стильні футболки, худі та кепки із зображеннями ваших улюблених героїв, кланв та емодзі. Покажіть усім, хто ваш фаворит!
+<li> Колекційні Фігурки: Деталізовані мініатюри ваших улюблених військ — від могутнього PEKKA до зухвалого Goblin Barrel. Ідеально для вашої колекції!</li> 
 
-Аксесуари: Брелоки, стікери, чохли для телефонів та інші дрібниці, які додадуть трішки магії Clash Royale у ваше повсякденне життя.
+<li> Предмети для дому: Кружки, плакати та інші речі, що створять затишну атмосферу справжнього гравця.</li> 
+</ul>   </section>
+<section class="about-images">
+        <img
+          src="https://images.teepublic.com/derived/production/designs/78567377_0/1754668454/i_m:bi_production_blanks_nnww1jebayb5zbwztdgd_1446840660,c_0_0_465x,s_313,q_90.jpg"
+          alt="Худі Clash Royale"
+          class="product-image"
+        />
+        <img
+          src="https://http2.mlstatic.com/D_NQ_NP_760137-MLA75705782324_042024-O.webp"
+          alt="Кепка Clash Royale"
+          class="product-image"
+        />
+        <img
+          src="https://pwa-api.eva.ua/img/512/512/resize/1/3/1329427_1_1753784965.jpg"
+          alt="Рюкзак Clash Royale"
+          class="product-image"
+        />
+      </section>
+      <!-- ℹ️ Секція Про нас -->
+      <section id="contact" class="contact section-hidden">
+        <h2>Про нас</h2>
+        <p>
+          Ми творимо одяг, натхненний мінімалізмом і комфортом, але з королівською увагою до
+          деталей. Наш бренд дарує продумані рішення для твого повсякденного стилю, зберігаючи
+          якість та естетику, гідні арени! ⚔️✨
+        </p>
 
-Колекційні Фігурки: Деталізовані мініатюри ваших улюблених військ — від могутнього PEKKA до зухвалого Goblin Barrel. Ідеально для вашої колекції!
+        <h2>Контакти</h2>
+        <p>Напишіть нам: <a href="mailto:info@wolarbebe.shop.ua">info@wolarbebe.shop.ua</a></p>
+        <p>Телефон: +380 (00) 123-45-67</p>
+      </section>
+    </main>
 
-Предмети для дому: Кружки, плакати та інші речі, що створять затишну атмосферу справжнього гравця. 
-            </section>
+    <!-- 📌 Футер -->
+    <footer>
+      <nav>
+        <a href="#" class="nav-link">Головна</a>
+        <a href="#gallery" class="nav-link">Категорії</a>
+        <a href="#contact" class="nav-link">Про нас</a>
+      </nav>
+      <p>&copy; 2025 WolarBebe Shop. Всі права захищені.</p>
+    </footer>
 
-    <!-- ℹ️ Секція Про нас -->
-    <section id="contact" class="contact section-hidden">
-      <h2>Про нас</h2>
-      <p>
-        Ми творимо одяг, натхненний мінімалізмом і комфортом, але з королівською увагою до деталей.  
-        Наш бренд дарує продумані рішення для твого повсякденного стилю, зберігаючи якість та естетику, гідні арени! ⚔️✨
-      </p>
-
-      <h2>Контакти</h2>
-      <p>Напишіть нам: <a href="mailto:info@wolarbebe.shop.ua">info@wolarbebe.shop.ua</a></p>
-      <p>Телефон: +380 (00) 123-45-67</p>
-    </section>
-  </main>
-
-  <!-- 📌 Футер -->
-  <footer>
-    <nav>
-      <a href="#" class="nav-link">Головна</a>
-      <a href="#gallery" class="nav-link">Категорії</a>
-      <a href="#contact" class="nav-link">Про нас</a>
-    </nav>
-    <p>&copy; 2025 WolarBebe Shop. Всі права захищені.</p>
-  </footer>
-
-  <!-- 🔝 Кнопка повернення вгору -->
-  <button id="scrollTopBtn" aria-label="Наверх">
-    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"   viewBox="0 0 64 64" role="img" aria-label="Up arrow">
-      <title>Up arrow</title>
-      <path fill="white" d="
+    <!-- 🔝 Кнопка повернення вгору -->
+    <button id="scrollTopBtn" aria-label="Наверх">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="42"
+        height="42"
+        viewBox="0 0 64 64"
+        role="img"
+        aria-label="Up arrow"
+      >
+        <title>Up arrow</title>
+        <path
+          fill="white"
+          d="
         M32 8 
         L50 28 
         Q52 30 49 32 
@@ -111,9 +153,10 @@
         L20 32 
         Q17 34 15 32 
         Q12 30 14 28 
-        L32 8Z"/>
-    </svg>
-  </button>
-  <script src="script.js"></script>
-</body>
+        L32 8Z"
+        />
+      </svg>
+    </button>
+    <script src="script.js"></script>
+  </body>
 </html>
