@@ -1,0 +1,39 @@
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+h1{margin:20px;}
+ul {
+  margin: 40px 0;
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+ h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.about-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  img {
+    width: 30%;
+  }
+}
